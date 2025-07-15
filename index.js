@@ -1,27 +1,24 @@
 console.log('Hello, Dio Bootcamp Savegnago!');
+let nome = 'Pedrinho Savegnago';
+let quantidade_Experiencia = 2002;
+let nivel = '';
 
-function calcularRanked(vitorias, derrotas) {
-  const saldoVitorias = vitorias - derrotas;
-  let nivel = "";
-
-  if (vitorias < 10) {
-    nivel = "Ferro";
-  } else if (vitorias >= 11 && vitorias <= 20) {
-    nivel = "Bronze";
-  } else if (vitorias >= 21 && vitorias <= 50) {
-    nivel = "Prata";
-  } else if (vitorias >= 51 && vitorias <= 80) {
-    nivel = "Ouro";
-  } else if (vitorias >= 81 && vitorias <= 90) {
-    nivel = "Diamante";
-  } else if (vitorias >= 91 && vitorias <= 100) {
-    nivel = "Lendário";
-  } else if (vitorias >= 101) {
-    nivel = "Imortal";
-  }
-
-  return `O Herói tem de saldo de ${saldoVitorias} está no nível de ${nivel}`;
+if (quantidade_Experiencia >= 10001){
+    nivel = 'Radiante';
+} else if (quantidade_Experiencia >= 9001){
+    nivel = 'Imortal';
+} else if (quantidade_Experiencia >= 8001){
+    nivel = 'Ascendente';
+} else if (quantidade_Experiencia >= 7001){
+    nivel = 'Platina';
+} else if (quantidade_Experiencia >= 5001){
+    nivel = 'Ouro';
+} else if (quantidade_Experiencia >= 2001){
+    nivel = 'Prata';
+} else if (quantidade_Experiencia >= 1001){
+    nivel = 'Bronze';
+} else {
+    nivel = 'Ferro';
 }
 
-// Exemplo de uso:
-console.log(calcularRanked(85, 20));  // O Herói tem de saldo de 65 está no nível de Diamante
+console.log(`O Herói de nome  ${nome} está no nível de ${nivel}`);
